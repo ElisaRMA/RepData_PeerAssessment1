@@ -7,7 +7,7 @@ output:
 keep_md: true
 ---
 
-
+This document describes the data analysis required for the Assignment of Week 2 from the course Reproducible Research - Coursera.
 
 
 
@@ -26,17 +26,19 @@ act$date <- as.Date(act$date)
 
 ### Total number of steps taken each day 
 
+Using the dplyr package the "group_by" and "summarize" functions can give the total number of steps each day
+
+
 ```r
 library(dplyr)
-```
 
-
-```r
 byday <- group_by(act, date)
 total <- summarize(byday, Total = sum(steps, na.rm = TRUE))
 ```
 
 ### Histogram of the total number of steps taken each day
+
+A simple use of the hist function
 
 
 ```r
@@ -79,7 +81,7 @@ For this, I decided to use the aggregate function this time, to familiarize myse
 ```r
 int <- aggregate(steps ~ interval, FUN=mean, data = act )
 
-plot1 <- plot(int$interval, int$steps, type = "l", xlab = "interval", ylab = "steps" )
+plot1 <- plot(int$interval, int$steps, type = "l", xlab = "interval", ylab = "steps", main = "Average number of steps by 5 minute interval" )
 ```
 
 ![plot of chunk timeseries1](figure/timeseries1-1.png)

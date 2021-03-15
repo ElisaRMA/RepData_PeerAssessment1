@@ -154,3 +154,4 @@ xyplot(steps ~ interval|daytype , int,  type = "l", layout = c(1,2), lty = 1, ma
 
 
 
+

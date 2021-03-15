@@ -9,6 +9,8 @@ keep_md: true
 
 
 
+
+
 ## Loading and Preprocessing the data
 
 For loading and preprocessing the activity data, first, the "read table" and "unz" functions were used. 

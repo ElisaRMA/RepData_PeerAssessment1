@@ -2,7 +2,8 @@
 title: "Reproducible Research: Peer Assessment 1"
 author: "ElisaR"
 date: "3/3/2021"
-output: html_document
+output: 
+        html_document:
 keep_md: true
 ---
 
